@@ -1,0 +1,269 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap");
+
+:root {
+  --Pink: hsl(322, 100%, 66%);
+  --Very-Pale-Cyan: hsl(193, 100%, 96%);
+  --Very-Dark-Cyan: hsl(192, 100%, 9%);
+  --Grayish-Blue: hsl(208, 11%, 55%);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  max-width: 100%;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex div {
+  flex: 1;
+}
+div img {
+  width: 100%;
+}
+h1,
+h2 {
+  width: 400px;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+}
+li,
+button {
+  font-family: "Open Sans", sans-serif;
+}
+p {
+  font-size: 18px;
+  width: 450px;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* the navagation */
+header {
+  background-color: #edfdff;
+  background-image: url(./images/bg-hero-desktop.svg);
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-attachment: scroll;
+}
+nav {
+  margin-bottom: 50px;
+}
+nav .flex {
+  flex-wrap: nowrap;
+}
+.container button {
+  margin-top: 20px;
+  width: 30%;
+  color: white;
+  border: none;
+  background-color: var(--Pink);
+  padding: 10px;
+  border-radius: 100px;
+  transition: all 0.3s ease;
+}
+.container button:hover {
+  background-color: hsla(322, 100%, 66%, 0.541);
+  cursor: pointer;
+}
+nav .flex img {
+  width: initial;
+}
+
+nav .flex div:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+nav .flex p {
+  width: 150px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 100px;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0px 0px 7px -2px grey;
+}
+header .container {
+  padding: 20px 30px;
+}
+
+/* the section0 */
+section .container {
+  margin-top: 10px;
+  border: 1px solid #8080806b;
+  padding: 50px 50px 50px 100px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 7px -2px grey;
+}
+main {
+  display: flex;
+  padding: 100px 0px 200px;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+}
+main section {
+  width: 90%;
+}
+main section:last-child {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  bottom: -80px;
+}
+main section:last-child .container {
+  background-color: white;
+  width: 50%;
+  text-align: center;
+  padding: 30px 20px;
+  border: none;
+}
+main section:last-child .container button {
+  padding: 15px 0;
+  width: 50%;
+  margin-top: 0;
+}
+main section:last-child .container h2 {
+  width: 100%;
+}
+
+/* the boooter */
+footer {
+  padding-top: 75px;
+  color: white;
+  background-color: var(--Very-Dark-Cyan);
+}
+footer .container {
+  padding: 50px;
+  display: flex;
+  align-items: center;
+}
+footer .container ul {
+  width: 100%;
+}
+footer img {
+  width: initial;
+}
+footer .container ul li {
+  display: flex;
+  font-size: 15px;
+}
+
+footer .container ul:nth-of-type(2) {
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+footer .container ul:nth-of-type(2) li:hover {
+  text-decoration: underline;
+}
+footer .container ul li:not(:first-child) {
+  margin-top: 20px;
+}
+footer .container p {
+  font-size: 15px;
+  width: 100%;
+}
+footer .container ul li div {
+  margin-right: 10px;
+}
+footer ul > img {
+  margin-top: -30px;
+}
+footer .circle {
+  margin-right: 5px;
+  border-radius: 50%;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid gray;
+  transition: all 0.3s ease-in-out;
+}
+footer .circle:hover {
+  color: var(--Pink);
+}
+footer .social {
+  height: 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+/* the media  */
+@media (min-width: 375px) and (max-width: 768px) {
+  body {
+    text-align: center;
+  }
+  .flex div {
+    flex: auto;
+  }
+  nav .flex div:last-child {
+    margin-top: 0px;
+  }
+  .flex div:last-child {
+    margin-top: 20px;
+  }
+  nav .flex img {
+    width: 110px;
+  }
+  h1 {
+    font-size: 25px;
+    width: 100%;
+  }
+  h2 {
+    font-size: 20px;
+    width: 100%;
+  }
+  p {
+    font-size: 12px;
+    width: 100%;
+  }
+  nav .flex p {
+    padding: 5px;
+    width: 100px;
+  }
+  .container button {
+    width: 100%;
+  }
+
+  section .container {
+    padding: 50px;
+  }
+  main section .container .flex {
+    flex-direction: column-reverse;
+  }
+  main section .container .flex div:first-child {
+    margin-top: 20px;
+  }
+  main section:last-child .container {
+    width: 90%;
+  }
+  main section:last-child .container button {
+    width: 90%;
+  }
+  footer .container {
+    flex-direction: column;
+  }
+  footer .container p {
+    text-align: left;
+    margin-left: 12px;
+  }
+  footer .container ul {
+    width: 100%;
+    text-align: left;
+  }
+  footer .social {
+    align-items: center;
+  }
+}
